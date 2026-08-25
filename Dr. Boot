@@ -11,9 +11,59 @@
 <body>
 	<div class="sect1">
 		<h1>DOCTOR BOOT</h1>
-		<h2> Make your computer smile again👍</h2>
+		<h3>Tel: 0740711847 📲</h3>
+
+		<h2> Make your computer smile again</h2>
 	</div>
-<button type="button" onclick="alert('Hello World!')">Continue</button>
+	
+	<div class="exp">
+		<p> Hello, i'm Dr. Boot. <br>
+		When you feel like your machine is not doing well, just don't worry, you can ask me.
+		I specialize in real-time Computer checkup and repair.</br>
+		Here are some of the services I offer:...
+		</p>
+	
+	</div>
+	<div class="items">
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+	<div class="itm">
+	The best of the best.....
+	<img src="images.jpg" alt="repair" style="width:70%; border-radius: 20px;">
+	</div>
+
+	
 
 </body>
 </html>
