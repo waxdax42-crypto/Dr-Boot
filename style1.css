@@ -17,19 +17,23 @@
 html{
 	scroll-behavior:smooth
 }
-
-body{
-
-	min-height:100vh;
-	color:var(--text);
-	font-family:Inter,sans-serif;
-	line-height:1.6;
-	background: url(background.jpg)/* rgba(120,40,20) */;
-	background-size: cover;
-	padding-left: 40px;
-	padding-right: 40px;
-	background-attachment:fixed
-	}
+body {
+    min-height: 100vh;
+    color: var(--text);
+    font-family: Inter, sans-serif;
+    line-height: 1.6;
+    background:
+        linear-gradient(
+            rgba(7, 17, 31, 0.35),
+            rgba(7, 17, 31, 0.35)
+        ), url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 
 a{
 	color:inherit;
@@ -88,10 +92,15 @@ button{
 	
 	
 .brand{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-family:'Space Grotesk';
-	font-size:50px;
+	font-size:45px;
 	font-weight:800;
-	letter-spacing:.08em}
+	letter-spacing:.08em
+
+}
 
 .brand span{
 	color:var(--accent)
@@ -300,6 +309,10 @@ position:absolute;
 	to {background-position: 100% center;}
 }
 
+.list{
+	padding-left: 10%;
+}
+
 .laptop{
 	min-width: 90%;
 	background: rgba(50,100,255, 0.3);
@@ -385,3 +398,453 @@ footer{
 	display:flex;	
 	justify-content:space-between;
 	font-size:.75rem}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .hero,
+    .cta,
+    footer {
+        max-width: 1300px;
+    }
+
+    .hero {
+        min-height: 720px;
+    }
+}
+
+
+/* =========================================================
+   TABLETS / SMALL LAPTOPS
+   ========================================================= */
+@media (max-width: 1024px) {
+
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Navigation */
+    .navbar {
+        width: min(350px, 100%);
+    }
+
+    .navbar2 {
+        width: min(700px, 100%);
+    }
+
+    .moreabout {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    /* Hero */
+    .hero {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 70px 0 60px;
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 7vw, 5rem);
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-visual {
+        min-height: 400px;
+    }
+
+    /* Services */
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    /* Explanation sections */
+    .explanation {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .topic {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .laptop,
+    .window,
+    .m365,
+    .problem,
+    .performance,
+    .software {
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* CTA */
+    .cta {
+        width: 100%;
+        padding: 40px;
+    }
+
+    /* Footer */
+    footer {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   TABLETS / LARGE PHONES
+   ========================================================= */
+@media (max-width: 768px) {
+
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+        background-attachment: scroll;
+    }
+
+    /* Navigation */
+    .navbar {
+        width: 100%;
+        max-width: 420px;
+        margin-top: 12px;
+    }
+
+    .navbar2 {
+        width: 100%;
+        max-width: 600px;
+        padding: 12px 14px;
+        gap: 12px;
+    }
+
+    .navbar nav {
+        width: 100%;
+    }
+
+    .moreabout {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .navbar2 .nav-call {
+        padding: 8px 12px;
+        font-size: .8rem;
+        white-space: nowrap;
+    }
+
+    .brand {
+        font-size: 38px;
+    }
+
+    /* Hero */
+    .hero {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 60px 0 50px;
+        text-align: center;
+    }
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    .hero p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .trust-row {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 280px;
+    }
+
+    /* Services */
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .service-image {
+        height: 170px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-content p {
+        min-height: auto;
+    }
+
+    /* Explanation */
+    .explanation {
+        padding: 15px 5px;
+        margin-top: 40px;
+    }
+
+    .topic {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        line-height: 1;
+    }
+
+    .laptop,
+    .window,
+    .m365,
+    .problem,
+    .performance,
+    .software {
+        font-size: clamp(20px, 5vw, 32px);
+        padding: 20px;
+    }
+
+    /* CTA */
+    .cta {
+        width: 100%;
+        padding: 35px 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Footer */
+    footer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   PHONES
+   ========================================================= */
+@media (max-width: 600px) {
+
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Navigation */
+    .navbar {
+        width: 100%;
+        border-radius: 14px;
+    }
+
+    .navbar2 {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 14px;
+    }
+
+    .navbar2 nav {
+        width: 100%;
+    }
+
+    .moreabout {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .serv {
+        font-size: .82rem;
+    }
+
+    .navbar2 .nav-call {
+        padding: 7px 12px;
+        font-size: .78rem;
+    }
+
+    .brand {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        font-size: 32px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 45px 0 40px;
+    }
+
+    .eyebrow {
+        font-size: .62rem;
+        letter-spacing: .12em;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 13vw, 4rem);
+    }
+
+    .hero p {
+        font-size: .95rem;
+        line-height: 1.6;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .trust-row {
+        gap: 8px;
+        font-size: .7rem;
+    }
+
+    /* Services */
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .service-content p {
+        font-size: .88rem;
+    }
+
+    /* Explanation */
+    .topic {
+        font-size: clamp(1.8rem, 10vw, 3rem);
+    }
+
+    .laptop,
+    .window,
+    .m365,
+    .problem,
+    .performance,
+    .software {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+        font-size: 20px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 30px 18px;
+        border-radius: 18px;
+    }
+
+    .cta h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: .7rem;
+        padding-bottom: 25px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+@media (max-width: 400px) {
+
+    .brand {
+        font-size: 27px;
+    }
+
+    .moreabout {
+        gap: 5px;
+    }
+
+    .serv {
+        font-size: .72rem;
+    }
+
+    .navbar2 .nav-call {
+        padding: 6px 9px;
+        font-size: .7rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: .9rem;
+    }
+
+    .service-image {
+        height: 170px;
+    }
+
+    .topic {
+        font-size: 1.7rem;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .btn:hover,
+    .service-card:hover {
+        transform: none;
+    }
+
+    .btn {
+        min-height: 46px;
+    }
+
+    .nav-call {
+        min-height: 42px;
+    }
+}
