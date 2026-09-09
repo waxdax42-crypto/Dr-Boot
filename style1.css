@@ -286,12 +286,12 @@ position:absolute;
 }
 
 .explanation{
-	min-width: 80%;
-	margin-top: 60px;
-	background: transparent;
-	border-radius: 20px;
-	color: white;
-	padding: 20px;
+    width: 100%;
+    margin-top: 30px;
+    background: transparent;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
 }
 
 .topic{
@@ -313,62 +313,29 @@ position:absolute;
 	padding-left: 10%;
 }
 
-.laptop{
-	min-width: 90%;
-	background: rgba(50,100,255, 0.3);
-	font-size: 40px;
-	padding: 20px;
-	border-radius: 20px;
-	margin: 0 0 15px;
+
+
+
+
+
+
+
+
+
+
+
+
+.laptop, .window, .m365, .problem, .performance, .software {
+    width: 100%; background: rgba(50,100,255,.3); padding: 24px; border-radius: 20px; margin: 0 0 15px;
 }
+.laptop p, .window p, .m365 p, .problem p, .performance p, .software p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
 
-.window{
-	min-width: 90%;
-	background: rgba(50,100,255, 0.3);
-	font-size: 40px;
-	padding: 20px;
-	border-radius: 20px;
-	margin: 0 0 15px;
-
-}
-
-.m365{
-	min-width: 90%;
-	background: rgba(50,100,255, 0.3);
-	font-size: 40px;
-	padding: 20px;
-	border-radius: 20px;
-	margin: 0 0 15px;
-
-}
-
-.problem{
-	min-width: 90%;
-	background: rgba(50,100,255, 0.3);
-	font-size: 40px;
-	padding: 20px;
-	border-radius: 20px;
-	margin: 0 0 15px;
-
-}
-
-.performance{
-	min-width: 90%;
-	background: rgba(50,100,255, 0.3);
-	font-size: 40px;
-	padding: 20px;
-	border-radius: 20px;
-	margin: 0 0 15px;
-
-}
-
-.software{
-	min-width: 90%;
-	background: rgba(50,100,255, 0.3);
-	font-size: 40px;
-	padding: 20px;
-	border-radius: 20px;
-}
+.about { width:min(1180px,calc(100% - 40px)); margin:70px auto 0; padding:50px 0; }
+.about .section-heading { margin-bottom:30px; }
+.about-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.about-card { padding:24px; border:1px solid var(--line); border-radius:20px; background:rgba(0,0,123,.5); }
+.about-card h3 { font-size:1.2rem; margin-bottom:10px; }
+.about-card p { color:var(--muted); font-size:.9rem; line-height:1.6; }
 
 .cta{
 	width:min(1180px,calc(100% - 40px));
@@ -497,6 +464,9 @@ footer{
         width: 100%;
     }
 
+    .about { width:100%; }
+    .about-grid { grid-template-columns:repeat(2,1fr); }
+
     /* CTA */
     .cta {
         width: 100%;
@@ -605,10 +575,7 @@ footer{
     }
 
     /* Explanation */
-    .explanation {
-        padding: 15px 5px;
-        margin-top: 40px;
-    }
+    .explanation { padding:10px 5px; margin-top:0; }
 
     .topic {
         font-size: clamp(2rem, 8vw, 3.5rem);
@@ -661,12 +628,7 @@ footer{
         border-radius: 14px;
     }
 
-    .navbar2 {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        border-radius: 14px;
-    }
+    .navbar2 { width:100%; display:grid; grid-template-columns:1fr; justify-items:center; gap:10px; border-radius:14px; }
 
     .navbar2 nav {
         width: 100%;
@@ -682,10 +644,7 @@ footer{
         font-size: .82rem;
     }
 
-    .navbar2 .nav-call {
-        padding: 7px 12px;
-        font-size: .78rem;
-    }
+    .navbar2 .nav-call { display:inline-flex; align-items:center; justify-content:center; min-width:90px; padding:7px 12px; font-size:.78rem; }
 
     .brand {
 		display: flex;
@@ -755,17 +714,13 @@ footer{
         font-size: clamp(1.8rem, 10vw, 3rem);
     }
 
-    .laptop,
-    .window,
-    .m365,
-    .problem,
-    .performance,
-    .software {
-        width: 100%;
-        min-width: 0;
-        padding: 18px;
-        font-size: 20px;
-    }
+    .explanation { padding:10px 5px; margin-top:0; }
+    .laptop, .window, .m365, .problem, .performance, .software { width:100%; min-width:0; padding:18px; }
+    .laptop p, .window p, .m365 p, .problem p, .performance p, .software p { font-size:.9rem; line-height:1.65; }
+    .about { padding:35px 0; margin-top:30px; }
+    .about-grid { grid-template-columns:1fr; gap:15px; }
+    .about-card { padding:20px; }
+    .about-card p { font-size:.88rem; }
 
     /* CTA */
     .cta {
