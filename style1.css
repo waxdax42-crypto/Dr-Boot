@@ -313,20 +313,12 @@ position:absolute;
 	padding-left: 10%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .laptop, .window, .m365, .problem, .performance, .software {
-    width: 100%; background: rgba(50,100,255,.3); padding: 24px; border-radius: 20px; margin: 0 0 15px;
+    width: 100%;
+	/*background: rgba(50,100,255,.3);*/
+	padding: 24px;
+	border-radius: 20px;
+	margin: 0 0 15px;
 }
 .laptop p, .window p, .m365 p, .problem p, .performance p, .software p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
 
